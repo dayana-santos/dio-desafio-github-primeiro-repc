@@ -1,0 +1,15 @@
+**Importante: sempre iniciar com a palavra 'git' + comando**
+***Silêncio = Sucesso*** (se não teve retorno negativo no comando, então deu certo)
+
+Alguns comandos do Git:
+
+git init = cria pasta e inicializa repositório
+git ls = limpa a visualização na tela
+git status = para ver status
+git mv = para mover conteúdo
+git add nomearquivo = adiciona arquivo na fila de commit
+git commit -m "escreva comentário aqui" = escreve mais detalhes sobre a alteração realizada para o commit
+git remote add origin https://... = para adicionar repositório no GitHub (utilizando o link que o próprio GitHub possui)
+git push origin master = empurra o código feito para o local remoto
+git clone https://... = para clonar repositório remoto para a máquina local
+
