@@ -16,10 +16,6 @@ class carro {
         this.cor = cor;
         this.gastoMedioPorKm = gastoMedioPorKm;
     }
-
-    descrever() {
-        console.log(`Um carro ${this.marca} ${this.cor} gasta ${this.gastoMedioPorKm} de combustível por km`);
-    }
 }
 
 
