@@ -1,0 +1,4 @@
+Atalhos para Debug Console
+
+F10 = próxima linha
+
