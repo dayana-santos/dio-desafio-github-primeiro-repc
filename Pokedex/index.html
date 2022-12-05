@@ -6,30 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
 
-    <style>
-        h1 {
-            color: #6493EB;
-        }
-    </style>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Arquivos relacionados: CSS -->
+    <link rel="stylesheet" href="/assets/css/global.css">
 
 </head>
 
 <body>
     
-    <h1>Teste</h1>
-    <p>parágrafo</p>
-    <button Id="btnTeste" type="button">
-        Teste
-    </button>
+    <section class="content">
+        <h1>Pokedex</h1>
 
-    <script>
+        <ol class="pokemons">
+            <li>
+                Bulbasaur
+                <img src="/assets/css/images-pokemons/001-bulbasaur.png" alt="Bulbasaur">
+            </li>
+            <li>
+                Ivysaur
+                <img src="/assets/css/images-pokemons/002-ivysaur.png" alt="Ivysaur">
+            </li>
+            <li>
+                Venusaur
+                <img src="/assets/css/images-pokemons/003-venusaur.png" alt="Venusaur">
+            </li>
+            <li>
+                Charmander
+                <img src="/assets/css/images-pokemons/004-charmander.png" alt="Charmander">
+            </li>
+            <li>
+                Charmeleon
+                <img src="/assets/css/images-pokemons/005-charmeleon.png" alt="Charmeleon">
+            </li>
+            <li>
+                Charizard
+                <img src="/assets/css/images-pokemons/006-charizard.png" alt="Charizard">
+            </li>
+                      
+          
+        </ol>
 
-        const bntTeste = document.getElementById("btnTeste");
-        bntTeste.addEventListener("click", function () {
-            console.log('Clicou no botão!')
-        })
+
+    </section>
+
+    <!-- Arquivos relacionados: JS -->
+    <script src="/assets/js/main.js">
 
     </script>
-
+   
 </body>
 </html>
