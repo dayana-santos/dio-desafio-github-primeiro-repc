@@ -37,10 +37,41 @@ encadeamento de .then para simplificar a leitura de código
 sempre o que fica no 2º .then é o retorno do 1º
 */
 
+function convertPokemonToLi(pokemon) {
+    return `
+        <li class="pokemon">
+            <span class="number">#001</span>
+            <span class="name">${pokemon.name}</span>
+
+            <div class="detail">
+                <ol class="types">
+                    <li class="type">grass</li>
+                    <li class="type">poison</li>
+                </ol>
+
+                <img src="/assets/css/images-pokemons/001-bulbasaur.png" 
+                    alt="${pokemon.name}">
+            </div>
+        </li>
+    `
+}
+
+const pokemonList = document.getElementById('pokemonList');
+pokemonList.appendChild('<li>teste</li>')
+
 
 fetch(url)
     .then((response) => response.json())
-    .then((jsonBody) => console.log(jsonBody))
+    .then((jsonBody) => jsonBody.results)
+    .then((pokemonList) => {
+        
+        for (let i = 0; i < pokemonList.length; i++) {
+            const pokemon = pokemonList[i];
+            console.log(convertPokemonToLi(pokemon))
+
+           
+        }
+    })
     .catch((error) => console.error(error))
 
 
