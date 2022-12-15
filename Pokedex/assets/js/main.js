@@ -26,13 +26,13 @@ console.log(x);
 código
 
 
-
+---------------------
 
 const offset = 0;
 const limit = 10;
-const url = 'https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}';
+const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
 
-
+---------------------------
 encadeamento de .then para simplificar a leitura de código
 sempre o que fica no 2º .then é o retorno do 1º
 */
@@ -56,18 +56,33 @@ function convertPokemonToLi(pokemon) {
     `
 }
 
+/* lista de pokemons convertida em html*/
+
 const pokemonList = document.getElementById('pokemonList');
 
-pokeApi.getPokemons().then((pokemons) => {
-        const listItems = []
+pokeApi.getPokemons().then((pokemons = []) => {
+    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('')
+    })
 
-            for (let i = 0; i < pokemons.length; i++) {
-            const pokemon = pokemons[i];
-            listItems.push(convertPokemonToLi(pokemon))
-        }
+    /* concatenando os itens de lista 
 
-        console.log(listItems)
-})
+    const newHtml = newList.join('')
+
+    pokemonList.innerHTML += newHtml
+
+    que foi transformado em 
+    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('')
+    ----------------------------------
+
+    const listItems = []
+
+    for (let i = 0; i < pokemons.length; i++) {
+    const pokemon = pokemons[i];
+    listItems.push(convertPokemonToLi(pokemon))
+    }
+
+    console.log(listItems) */
+
 
 
 
