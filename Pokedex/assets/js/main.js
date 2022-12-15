@@ -64,24 +64,6 @@ pokeApi.getPokemons().then((pokemons = []) => {
     pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('')
     })
 
-    /* concatenando os itens de lista 
-
-    const newHtml = newList.join('')
-
-    pokemonList.innerHTML += newHtml
-
-    que foi transformado em 
-    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('')
-    ----------------------------------
-
-    const listItems = []
-
-    for (let i = 0; i < pokemons.length; i++) {
-    const pokemon = pokemons[i];
-    listItems.push(convertPokemonToLi(pokemon))
-    }
-
-    console.log(listItems) */
 
 
 
