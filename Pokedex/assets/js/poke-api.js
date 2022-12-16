@@ -32,23 +32,25 @@ código
 
 const pokeApi = {}
 
-pokeApi.getPokemons = function(offset = 0, limit = 10) {
-    const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
-
-    return fetch(url)
+pokeApi.getPokemonDetail = (pokemon) => {
+    return fetch(pokemon.url)
         .then((response) => response.json())
-        .then((jsonBody) => jsonBody.results)
-        .catch((error) => console.error(error))
 }
 
-/*faz a requisição para cada pokemon*/
+pokeApi.getPokemons = function(offset = 0, limit = 5) {
+    const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
 
-Promise.all([
-    fetch('https://pokeapi.co/api/v2/pokemon/1'),
-    fetch('https://pokeapi.co/api/v2/pokemon/2'),
-    fetch('https://pokeapi.co/api/v2/pokemon/3'),
-    fetch('https://pokeapi.co/api/v2/pokemon/4'),
-    fetch('https://pokeapi.co/api/v2/pokemon/5'),
-]) .then((results) => {
-    console.log(results)
-})
+    /*busca a lista de pokemons*/
+    return fetch(url)
+        /*converte a lista para json*/
+        .then((response) => response.json())
+        /*pega os resultados da lista em json*/
+        .then((jsonBody) => jsonBody.results)
+        /*transforma em uma nova lista, com promises de detalhes dos pokemons*/
+        .then((pokemons) => pokemons.map(pokeApi.getPokemonDetail))
+        /*lista de requisições*/
+        .then((detailRequests) => Promise.all(detailRequests))
+        /* imprimir a lista*/
+        .then((pokemonsDetails) => pokemonsDetails)
+}
+
