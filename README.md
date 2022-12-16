@@ -6,3 +6,4 @@ Repositório criado para o Desafio de Projeto
 [Passo a Passo para fazer commit](https://blog.cod3r.com.br/guia-basico-de-git-como-fazer-commit-no-github/)<br>
 [Mussum Ipsum](https://mussumipsum.com/)<br>
 [Status Dogs](https://httpstatusdogs.com/)<br>
+[Poke API](https://pokeapi.co/)<br>
