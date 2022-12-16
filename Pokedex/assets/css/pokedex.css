@@ -127,6 +127,25 @@
     height: 70px;
 }
 
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+.pagination button {
+   background-color: #6493EB;
+   border: none;
+   border-radius: 1rem;
+   color: whitesmoke;
+   margin: .25rem 0;
+   padding: .625rem 2rem;
+   font-size: .825rem;
+}
+
 /* ----------------------------LAYOUT RESPONSIVO ---------------------------*/
 
 /* Lista: Para telas a partir de 380 pixels  = 2 colunas de cards */
