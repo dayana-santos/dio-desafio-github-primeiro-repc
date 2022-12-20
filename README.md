@@ -7,3 +7,7 @@ Repositório criado para o Desafio de Projeto
 [Mussum Ipsum](https://mussumipsum.com/)<br>
 [Status Dogs](https://httpstatusdogs.com/)<br>
 [Poke API](https://pokeapi.co/)<br>
+[Node](https://nodejs.org/en/)<br>
+[NPM](https://www.npmjs.com/)<br>
+[Yarn](https://yarnpkg.com/getting-started/install)<br>
+[React.js](https://pt-br.reactjs.org/)<br>
