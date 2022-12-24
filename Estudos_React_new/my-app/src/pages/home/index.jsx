@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '../../components/Button';
 import { Header } from '../../components/Header';
 import bannerImage from "../../assets/banner.png";
@@ -13,6 +13,13 @@ import {
  } from "./styles";
 
 const Home = () => {
+
+    const navigate = useNavigate();
+
+    const handleClickSigIn = () => {
+        navigate('/login');
+    }
+
     return (<>
             <Header />
             <Container>
@@ -28,7 +35,7 @@ const Home = () => {
                     Domine as tecnologias utilizadas pelas empresas mais inovadoras do mundo e encare seu novo 
                         desafio profissional, evoluindo em comunidade com os melhores experts.
                     </TextContent>
-                    <Button title='Começar agora' variant='secondary' onClick={ () => null} />
+                    <Button title='Começar agora' variant='secondary' onClick={handleClickSigIn} />
                 </div>
                 <div>
                     <img src={bannerImage} alt='Imagem principal' />
