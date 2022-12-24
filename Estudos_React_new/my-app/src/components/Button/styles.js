@@ -1,4 +1,4 @@
-import  styled, { css }  from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const ButtonContainer = styled.button`
   background: #565656;
@@ -17,7 +17,7 @@ export const ButtonContainer = styled.button`
     background: #e4105d;
 
     &::after {
-      content: '',
+      content: '';
       position: absolute;
       border: 1px solid #e4105d;
       top: -5px;
