@@ -13,7 +13,7 @@ import {
  } from "./styles";
 
 const Home = () => {
-    return(<>
+    return (<>
             <Header />
             <Container>
                 <div /* como foi utilizado Display Flex, cada div será uma parte da pág*/>
